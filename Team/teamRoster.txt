@@ -5,3 +5,7 @@ I make a mean, breakfast.
 Name: Christopher Forsythe
 Hobbies: Video Gaming, Sports, Programming
 Something interesting about myself: I'm a jack of all trades. I'm also left handed.
+
+name: Michael Velasquez
+hobby: Video games, Swimming
+something interesting about yourself: Professional bottle flipper
