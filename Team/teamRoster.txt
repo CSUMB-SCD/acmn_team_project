@@ -9,3 +9,7 @@ Something interesting about myself: I'm a jack of all trades. I'm also left hand
 name: Michael Velasquez
 hobby: Video games, Swimming
 something interesting about yourself: Professional bottle flipper
+
+Name: Alyssia Goodwin
+Hobbies: Painting
+Something interesting about myself: I went on a business trip to DC this summer to visit Booz Allen headquarters.
