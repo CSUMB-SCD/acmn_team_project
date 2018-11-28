@@ -14,7 +14,7 @@ export class PhonesComponent implements OnInit {
   ngOnInit() {
   }
   clickEventHandler(phone: number) {
-   //pass the key value with the router to the details page & get the shit
+   // pass the key value with the router to the details page & get the shit
 
 
   }
