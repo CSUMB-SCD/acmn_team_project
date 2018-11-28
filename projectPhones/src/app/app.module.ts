@@ -11,6 +11,7 @@ import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PhonesComponent } from './phones/phones.component';
 
 const appRoutes: Routes = [
   {path: 'Home', component: HomePageComponent},
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     CheckoutPageComponent,
     ConfirmationPageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PhonesComponent
   ],
   imports: [
     RouterModule.forRoot(

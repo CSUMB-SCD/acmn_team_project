@@ -1,0 +1,15 @@
+
+<div class="container">
+<div *ngFor="let phone of phones">
+<div class ="row">
+  <div class ="column"> <img src ={{phone.image}}> </div>
+  <div class ="column" ><button (click)='clickEventHandler(phone.key)'  class="btn-primary">{{phone.name}}</button></div>
+  <div class ="column"> <h4>{{phone.amount}} in stock</h4></div>
+  <div class ="column"> <h4>{{phone.price}}</h4></div>
+
+  <button>Add To Cart</button>
+</div>
+</div>
+</div>
+
+
