@@ -39,3 +39,18 @@ button{
   overflow:scroll;
 }
 
+a{
+  padding-inline-start: 5%;
+  padding-inline-end: 5%;
+  padding-left: 3%;
+  padding-top: 3%;
+  float: left;
+  width: 20%;
+  padding: 3%;
+  color: #565264;
+  font-size: 35px;
+  text-align: center;
+
+}
+
+a:hover, a:active {text-decoration: underline;}

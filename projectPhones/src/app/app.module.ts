@@ -12,6 +12,9 @@ import { ConfirmationPageComponent } from './confirmation-page/confirmation-page
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PhonesComponent } from './phones/phones.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   {path: 'Home', component: HomePageComponent},
@@ -39,7 +42,9 @@ const appRoutes: Routes = [
     ConfirmationPageComponent,
     HeaderComponent,
     FooterComponent,
-    PhonesComponent
+    PhonesComponent,
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -47,7 +52,8 @@ const appRoutes: Routes = [
       {enableTracing: true} // debugging purposes only
     ),
     BrowserModule,
-    NgbModule
+    NgbModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

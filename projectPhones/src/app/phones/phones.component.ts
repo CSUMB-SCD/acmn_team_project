@@ -1,5 +1,7 @@
+import { PhoneService } from './../phone.service';
 import { Component, OnInit } from '@angular/core';
-import { PHONE } from '../mock-phones';
+import { PHONES } from '../mock-phones';
+import { Phone } from '../phone';
 
 @Component({
   selector: 'app-phones',
@@ -8,14 +10,17 @@ import { PHONE } from '../mock-phones';
 })
 export class PhonesComponent implements OnInit {
 
-  phones = PHONE;
-  constructor() { }
+
+  phones: Phone[];
+  // tslint:disable-next-line:no-shadowed-variable
+  constructor(private PhoneService: PhoneService) { }
 
   ngOnInit() {
+    this.getPhones();
   }
-  clickEventHandler(phone: number) {
-   // pass the key value with the router to the details page & get the shit
 
-
+  getPhones(): void {
+    this.PhoneService.getPhones()
+        .subscribe(phones => this.phones = phones);
   }
 }
