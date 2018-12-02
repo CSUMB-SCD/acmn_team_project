@@ -1,0 +1,29 @@
+ <app-header></app-header>
+<div *ngIf="Phone">
+
+  <h1><u>{{Phone.name}} Phone Details</u></h1>
+  <div>
+  <div class ="column"><img src = {{Phone.image}}> </div>
+  <div class ="column1"><h4><u>Description:</u> {{Phone.description}} </h4> </div>
+  <div class="column1"> <h4><u>Price:</u> ${{Phone.price}}</h4> </div>
+  <div class="column1"><h4><u>Quantity: </u>{{Phone.amount}}</h4></div>
+  <div class="column1"><h4><u>Buy: </u> </h4>
+      <div class="input-group">
+     <div class ="input"><input id="qunatityWanted" type="text" class="form-control" name="qunatityWanted" placeholder="Enter a number"></div>
+      </div> </div>
+</div>
+<a routerLink="/Products"> Back to Products Page </a>
+
+
+   <!-- Product Name
+Product Description
+Price
+# of  items in stock
+A hi-res image of product item
+“Buy” option
+# of items to “Buy”
+-->
+  </div>
+
+
+

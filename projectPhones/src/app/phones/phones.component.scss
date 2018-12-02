@@ -1,0 +1,56 @@
+
+
+img{
+    width: 200px;
+    height: 120px;
+}
+
+.container{
+  padding-top: 4%;
+  text-align: center;
+}
+
+h4{
+  display:inline;
+  padding-inline-start: 5%;
+  padding-inline-end: 5%;
+  color: #191D32;
+}
+
+button{
+  color: #841c26;
+  font-size: 20px;
+  border-radius: 2px;
+  border: none;
+  text-align: right;
+  background-color:white;
+  height:90px;
+
+
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 3%;
+}
+
+#row{
+  overflow:scroll;
+}
+
+a{
+  padding-inline-start: 5%;
+  padding-inline-end: 5%;
+  padding-left: 3%;
+  padding-top: 3%;
+  float: left;
+  width: 20%;
+  padding: 3%;
+  color: #565264;
+  font-size: 35px;
+  text-align: center;
+
+}
+
+a:hover, a:active {text-decoration: underline;}

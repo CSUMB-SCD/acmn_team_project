@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+}
+.carousel {
+  width: auto;
+  max-height: 768px;
+  overflow: hidden;
+}
+.carousel .item img {
+  max-height: 50px;
+  min-width: auto;
+}
