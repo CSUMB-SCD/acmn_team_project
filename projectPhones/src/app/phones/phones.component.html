@@ -2,13 +2,13 @@
   <div *ngFor="let Phone of phones$">
 
     <div class = "row">
-    <div class ="column"> <img src = {{Phone.picture.picture}}> </div>
+    <div class ="column"> <img src = {{Phone.picture.lowRes}}> </div>
     <a routerLink="/Details/{{Phone.id}}"><b>{{Phone.name.name}}</b> </a>
     <div class ="column"> <h4>{{Phone.qty.quantity}} in stock</h4></div>
     <div class ="column"> <h4>{{Phone.price.price}}</h4></div>
 
 
-    <button  ng-click = "alert('AddToCart')">Add To Cart</button>
+    <button  (click)="addItem(Phone)">Add To Cart</button>
 
    </div>
 

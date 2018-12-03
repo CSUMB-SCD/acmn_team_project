@@ -1,7 +1,10 @@
+import { CheckoutService } from './../checkout.service';
 import { PhoneService } from './../phone.service';
 import { Component, OnInit } from '@angular/core';
 import { Phone } from '../phone';
 import { Observable } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+
 @Component({
   selector: 'app-phones',
   templateUrl: './phones.component.html',
@@ -10,8 +13,8 @@ import { Observable } from 'rxjs';
 })
 export class PhonesComponent implements OnInit {
 
-  phones$: Object;
-
+  phones$: Phone;
+  itemCount = 0;
   // tslint:disable-next-line:no-shadowed-variable
   constructor(private Phone: PhoneService) { }
 
@@ -24,5 +27,6 @@ export class PhonesComponent implements OnInit {
       // tslint:disable-next-line:no-shadowed-variable
       Phone => this.phones$ = Phone
     );
-   }
+  }
+
 }
