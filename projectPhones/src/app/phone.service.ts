@@ -1,8 +1,9 @@
 import { MessageService } from './message.service';
 import { Injectable } from '@angular/core';
 import { Phone } from './phone';
-import { PHONES } from './mock-phones';
 import { Observable, of } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,17 +11,13 @@ import { Observable, of } from 'rxjs';
 export class PhoneService {
 
   // tslint:disable-next-line:no-shadowed-variable
-  constructor(private MessageService: MessageService) { }
+  constructor(private http: HttpClient) { }
 
-  getPhones(): Observable <Phone[]> {
-    this.MessageService.add('PhoneService: fetched PHONES');
-    return of (PHONES);
+  getPhones() {
+    return this.http.get('https://freedomphones-db-microservice.herokuapp.com/allPhones');
   }
 
-  getPhone(key: number): Observable<Phone> {
-    this.MessageService.add(`Phone Service: fetched phone key =${key}`);
-    // tslint:disable-next-line:no-shadowed-variable
-    return of (PHONES.find(Phone => Phone.key === key));
-
+   getPhone(id) {
+    return this.http.get('https://freedomphones-zuul-svc.herokuapp.com/phone-service/findById/' + id);
   }
 }
