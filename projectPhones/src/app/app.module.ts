@@ -14,7 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PhonesComponent } from './phones/phones.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: 'Home', component: HomePageComponent},
@@ -44,8 +44,9 @@ const appRoutes: Routes = [
     FooterComponent,
     PhonesComponent,
     MessagesComponent,
-    DashboardComponent
-  ],
+
+
+    ],
   imports: [
     RouterModule.forRoot(
       appRoutes,
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
