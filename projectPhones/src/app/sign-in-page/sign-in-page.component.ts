@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in-page',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInPageComponent implements OnInit {
 
-  constructor() { }
+  signIn: any;
+  constructor() {
+   }
 
   ngOnInit() {
+  }
+  checkuser() {
+
+
   }
 
 }

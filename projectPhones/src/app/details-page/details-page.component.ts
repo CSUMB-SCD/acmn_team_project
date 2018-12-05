@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 export class DetailsPageComponent implements OnInit {
 @Input()
 
-  phone$: Object;
+  phone$: Phone;
   constructor( private route: ActivatedRoute,
     // tslint:disable-next-line:no-shadowed-variable
     private Phone: PhoneService, private location: Location) {
@@ -25,6 +25,4 @@ export class DetailsPageComponent implements OnInit {
       Phone => this.phone$ = Phone
     );
   }
-
-
 }

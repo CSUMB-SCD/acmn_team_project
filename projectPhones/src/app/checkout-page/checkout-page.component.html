@@ -1,4 +1,31 @@
 <app-header></app-header>
 
- congratulations on your purchase
-<app-footer></app-footer>
+<div class="top">
+<h2>Shopping Cart</h2>
+
+<div *ngFor="let Phone of phones$; let i=index">
+
+  <div class = "row" *ngIf="i<3">
+  <div class ="column"></div>
+  <div class ="column"> <img src = {{Phone.picture.lowRes}}> </div>
+  <a routerLink="/Details/{{Phone.id}}"><b>{{Phone.name.name}}</b> </a>
+  <div class ="column"> <h4>{{Phone.price.price}}</h4></div>
+
+  <select>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+  <button>Remove</button>
+ </div>
+</div>
+
+<div class="bottom">
+<h3>Total = $2,699.97</h3>
+<button >Check out</button>
+</div>
+<a routerLink="/Products">
+  <button >Continue Shopping</button> </a>
+</div>
+

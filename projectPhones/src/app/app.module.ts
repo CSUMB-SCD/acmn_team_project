@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,8 +15,6 @@ import { FooterComponent } from './footer/footer.component';
 import { PhonesComponent } from './phones/phones.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MessagesComponent } from './messages/messages.component';
-import { HttpClientModule } from '@angular/common/http';
-
 const appRoutes: Routes = [
   {path: 'Home', component: HomePageComponent},
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -44,7 +43,6 @@ const appRoutes: Routes = [
     FooterComponent,
     PhonesComponent,
     MessagesComponent,
-
 
     ],
   imports: [
