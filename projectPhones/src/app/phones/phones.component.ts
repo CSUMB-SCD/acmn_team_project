@@ -2,7 +2,7 @@ import { PhoneService } from './../phone.service';
 import { Component, OnInit } from '@angular/core';
 import { PHONES } from '../mock-phones';
 import { Phone } from '../phone';
-
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-phones',
   templateUrl: './phones.component.html',
@@ -10,8 +10,8 @@ import { Phone } from '../phone';
 })
 export class PhonesComponent implements OnInit {
 
+  phones$: Object;
 
-  phones: Phone[];
   // tslint:disable-next-line:no-shadowed-variable
   constructor(private PhoneService: PhoneService) { }
 
@@ -20,7 +20,9 @@ export class PhonesComponent implements OnInit {
   }
 
   getPhones(): void {
-    this.PhoneService.getPhones()
-        .subscribe(phones => this.phones = phones);
-  }
+    this.PhoneService.getPhones().subscribe(
+      // tslint:disable-next-line:no-shadowed-variable
+      Phone => this.phones$ = Phone
+    );
+   }
 }
