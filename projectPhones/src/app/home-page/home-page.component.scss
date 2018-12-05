@@ -1,15 +1,12 @@
 body {
   text-align: center;
 }
-
-img {
-  width: 500px;
-  height: 350px;
-
+.carousel {
+  width: auto;
+  max-height: 768px;
+  overflow: hidden;
 }
-
-
-.b{
-  padding:30%;
-
+.carousel .item img {
+  max-height: 50px;
+  min-width: auto;
 }
